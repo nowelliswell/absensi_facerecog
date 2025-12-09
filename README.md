@@ -6,7 +6,6 @@
 ![Flask](https://img.shields.io/badge/Flask-3.0.3-green.svg)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.10.0-red.svg)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 **Sistem absensi otomatis berbasis pengenalan wajah (Face Recognition) menggunakan Flask, OpenCV, dan MySQL**
 
@@ -30,8 +29,6 @@
 - [API Endpoints](#-api-endpoints)
 - [Troubleshooting](#-troubleshooting)
 - [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
 
 ---
 
@@ -629,9 +626,9 @@ Kontribusi sangat diterima! Berikut cara berkontribusi:
 
 **Project Maintainer**: Noel
 
-- Email: your.email@example.com
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+- Email: noelgrevansha@gmail.com
+- GitHub: [nowelliswell]([https://github.com/yourusername](https://github.com/nowelliswell))
+- LinkedIn: [Noelino Grevansha]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/noelino-grevansha-b4ba19215/))
 
 **Project Link**: [https://github.com/yourusername/Sistem-Absensi-Face-Recognition](https://github.com/yourusername/Sistem-Absensi-Face-Recognition)
 
