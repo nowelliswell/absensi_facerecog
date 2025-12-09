@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+Scripts/
+pyvenv.cfg
+Lib/
+Include/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project Specific
+dataset/*.jpg
+dataset/*.png
+captured_face.png
+classifier.xml
+*.whl
+
+# Logs
+*.log
+
+# Database
+*.db
+*.sqlite
+
+# Uploads
+static/uploads/*
+!static/uploads/.gitkeep
+static/temp_face.png
