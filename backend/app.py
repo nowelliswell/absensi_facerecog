@@ -38,7 +38,7 @@ def generate_dataset(nbr):
         # scaling factor=1.3
         # Minimum neighbor = 5
  
-        if faces is ():
+        if len(faces) == 0:
             return None
         for (x, y, w, h) in faces:
             cropped_face = img[y:y + h, x:x + w]

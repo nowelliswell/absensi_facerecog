@@ -1,12 +1,14 @@
-# Python
+# ==================== Python ====================
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
-env/
-venv/
-ENV/
 build/
 develop-eggs/
 dist/
@@ -23,38 +25,117 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual Environment
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 Scripts/
 pyvenv.cfg
-Lib/
-Include/
 
-# IDE
-.vscode/
-.idea/
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+
+# Flask stuff:
+instance/
+.webassets-cache
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# ==================== Node.js ====================
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+dist/
+dist-ssr/
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==================== Project Specific ====================
+# Face recognition data
+backend/dataset/*.jpg
+backend/classifier.xml
+backend/static/uploads/*.png
+backend/static/uploads/*.jpg
+backend/static/temp_face.png
+
+# Temporary files
+*.tmp
+*.bak
 *.swp
-*.swo
 *~
+captured_face.png
+
+# Database
+*.sqlite
+*.db
+
+# Logs
+logs/
+*.log
 
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Project Specific
-dataset/*.jpg
-dataset/*.png
-captured_face.png
-classifier.xml
-*.whl
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# Logs
-*.log
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Database
-*.db
-*.sqlite
+# ==================== Keep These ====================
+# Keep example files
+!backend/dataset/.gitkeep
+!backend/static/uploads/.gitkeep
 
-# Uploads
-static/uploads/*
-!static/uploads/.gitkeep
-static/temp_face.png
+# Keep classifier if trained
+# backend/classifier.xml
+
+# Keep documentation
+!*.md
+!README*
