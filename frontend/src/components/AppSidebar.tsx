@@ -2,7 +2,7 @@ import {
   LayoutDashboard,
   ScanFace,
   UserPlus,
-  Camera,
+  Fingerprint,
   ClipboardList,
   Settings,
   LogOut,
@@ -47,7 +47,7 @@ export function AppSidebar() {
     <Sidebar className="border-r border-sidebar-border">
       <div className="flex items-center gap-3 px-6 py-5 border-b border-sidebar-border">
         <div className="flex h-9 w-9 items-center justify-center rounded-lg gradient-bg">
-          <Camera className="h-5 w-5 text-primary-foreground" />
+          <Fingerprint className="h-5 w-5 text-primary-foreground" />
         </div>
         <div>
           <h2 className="text-sm font-bold text-sidebar-foreground">FaceAttend</h2>

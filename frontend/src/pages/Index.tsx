@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ScanFace, Users, Clock, CheckCircle, ArrowRight, Shield, Zap, BarChart3 } from "lucide-react";
+import { ScanFace, Users, Clock, CheckCircle, ArrowRight, Shield, Zap, BarChart3, Fingerprint } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -32,7 +32,7 @@ export default function Index() {
         <nav className="relative z-10 flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-bg">
-              <ScanFace className="h-6 w-6 text-primary-foreground" />
+              <Fingerprint className="h-6 w-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-primary-foreground">FaceAttend</span>
           </div>
