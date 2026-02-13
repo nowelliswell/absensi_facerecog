@@ -1,15 +1,307 @@
-# 🎯 Sistem Absensi Face Recognition
+# 🎯 FaceAttend - AI Face Recognition Attendance System
 
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.0.3-green.svg)
+![React](https://img.shields.io/badge/React-18.3-61DAFB.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6.svg)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.10.0-red.svg)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange.svg)
 
-**Sistem absensi otomatis berbasis pengenalan wajah (Face Recognition) menggunakan Flask, OpenCV, dan MySQL**
+**Smart attendance system with AI-powered facial recognition. Contactless, accurate, and effortless employee attendance tracking.**
 
-[Features](#-features) • [Demo](#-demo) • [Installation](#-installation) • [Usage](#-usage) • [Tech Stack](#-tech-stack) • [Contributing](#-contributing)
+[Features](#-features) • [Demo](#-demo) • [Installation](#-installation) • [Usage](#-usage) • [Tech Stack](#-tech-stack)
+
+</div>
+
+---
+
+## 📋 Daftar Isi
+
+- [Tentang Project](#-tentang-project)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Prasyarat](#-prasyarat)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Struktur Project](#-struktur-project)
+- [API Endpoints](#-api-endpoints)
+- [Troubleshooting](#-troubleshooting)
+
+---
+
+## 🚀 Tentang Project
+
+**FaceAttend** adalah sistem absensi modern berbasis AI yang menggunakan teknologi face recognition untuk pencatatan kehadiran karyawan secara otomatis. Dibangun dengan React frontend dan Flask backend, sistem ini menawarkan pengalaman user yang modern dan intuitif.
+
+### Keunggulan:
+- ✅ **AI-Powered**: Face recognition dengan LBPH algorithm
+- ✅ **Modern UI**: React + TypeScript + shadcn/ui components
+- ✅ **Real-time**: Deteksi dan recognition dalam hitungan detik
+- ✅ **Secure**: Authentication system dengan protected routes
+- ✅ **Responsive**: Mobile-friendly design
+- ✅ **RESTful API**: Clean API architecture
+- ✅ **GPS Tracking**: Automatic location capture
+- ✅ **Double Check-in Prevention**: Smart validation system
+
+---
+
+## ✨ Features
+
+### 🎨 Modern Frontend
+- React 18 dengan TypeScript
+- shadcn/ui component library
+- Tailwind CSS untuk styling
+- Framer Motion untuk animations
+- Responsive design untuk semua device
+
+### 🔐 Authentication & Security
+- Admin login dengan session management
+- Protected routes untuk halaman admin
+- Secure API endpoints dengan CORS
+
+### 👤 Employee Management
+- Employee registration dengan form validation
+- Face dataset generation (100 images per employee)
+- Automatic model training
+- Employee data management
+
+### 📸 Face Recognition
+- Real-time face detection dengan Haar Cascade
+- LBPH Face Recognizer dengan 60% confidence threshold
+- Webcam integration
+- Instant recognition feedback
+
+### 📊 Attendance System
+- One-click clock in dengan face recognition
+- Automatic timestamp recording
+- GPS location tracking
+- Double check-in prevention
+- Recent check-ins display
+- Real-time attendance updates
+
+### 🎛️ Admin Dashboard
+- Real-time statistics (total employees, present, late, absent)
+- Today's attendance table dengan search
+- Weekly attendance charts
+- Monthly trend analysis
+- Punctuality rate visualization
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React 18.3** - UI library
+- **TypeScript 5.5** - Type safety
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - Component library
+- **Framer Motion** - Animations
+- **React Router** - Navigation
+- **Axios** - HTTP client
+- **Zustand** - State management
+- **Recharts** - Data visualization
+
+### Backend
+- **Flask 3.0.3** - Python web framework
+- **Flask-CORS** - Cross-origin resource sharing
+- **OpenCV 4.10.0** - Computer vision
+- **MySQL Connector 8.4.0** - Database connector
+- **NumPy 1.26.4** - Numerical computing
+- **Pillow 10.3.0** - Image processing
+
+### Database
+- **MySQL 8.0** - Relational database
+
+### Computer Vision
+- **Haar Cascade Classifier** - Face detection
+- **LBPH Face Recognizer** - Face recognition algorithm
+
+---
+
+## 📦 Prasyarat
+
+- **Python 3.10+**
+- **Node.js 18+** dan npm
+- **MySQL 8.0+**
+- **Webcam**
+- **Git**
+
+---
+
+## 📥 Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/nowelliswell/absensi_facerecog.git
+cd absensi_facerecog
+```
+
+### 2. Setup Backend
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # macOS/Linux
+
+pip install -r requirements.txt
+```
+
+### 3. Setup Database
+
+```bash
+mysql -u root -p < flask_db.sql
+```
+
+### 4. Setup Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+### 5. Configuration
+
+**Backend** - Edit `backend/api.py` jika perlu:
+```python
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    passwd="",
+    database="flask_db"
+)
+```
+
+**Frontend** - Copy `.env.example` ke `.env`:
+```bash
+cp .env.example .env
+```
+
+Edit `frontend/.env`:
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+---
+
+## 🎯 Usage
+
+### 1. Start Backend
+
+```bash
+cd backend
+python api.py
+```
+
+Backend akan berjalan di: `http://localhost:5000`
+
+### 2. Start Frontend
+
+```bash
+cd frontend
+npm run dev
+```
+
+Frontend akan berjalan di: `http://localhost:8082`
+
+### 3. Access Application
+
+Buka browser: **http://localhost:8082**
+
+### 4. Admin Login
+
+- URL: `http://localhost:8082/login`
+- Username: `admin`
+- Password: `admin123`
+
+---
+
+## 📁 Struktur Project
+
+```
+absensi_facerecog/
+│
+├── backend/                        # Flask backend
+│   ├── api.py                      # RESTful API
+│   ├── dataset/                    # Face images
+│   ├── resources/                  # Haar Cascade
+│   ├── classifier.xml              # Trained model
+│   ├── requirements.txt            # Python dependencies
+│   └── flask_db.sql               # Database schema
+│
+├── frontend/                       # React frontend
+│   ├── src/
+│   │   ├── components/            # React components
+│   │   ├── pages/                 # Page components
+│   │   ├── lib/                   # Utilities & API
+│   │   └── assets/                # Images & styles
+│   ├── public/                    # Static files
+│   ├── package.json               # Node dependencies
+│   └── .env                       # Environment variables
+│
+└── Documentation/
+    ├── README.md
+    ├── SETUP_INSTRUCTIONS.md
+    ├── BACKEND_FIX_SUMMARY.md
+    └── RETRAIN_GUIDE.md
+```
+
+---
+
+## 🔌 API Endpoints
+
+### Authentication
+- `POST /api/auth/login` - Admin login
+- `POST /api/auth/logout` - Admin logout
+
+### Employees
+- `GET /api/employees` - Get all employees
+- `POST /api/employees/register` - Register new employee
+
+### Face Recognition
+- `POST /api/face/train/<nbr>` - Train classifier
+- `POST /api/face/recognize` - Recognize face from image
+
+### Attendance
+- `POST /api/attendance/clock-in` - Clock in attendance
+- `GET /api/attendance/today` - Get today's attendance
+- `GET /api/attendance/history` - Get attendance history
+- `DELETE /api/attendance/<id>` - Delete attendance record
+
+### Dashboard
+- `GET /api/dashboard/stats` - Get dashboard statistics
+- `GET /api/dashboard/weekly` - Get weekly attendance data
+- `GET /api/dashboard/monthly` - Get monthly trend
+
+---
+
+## 🔧 Troubleshooting
+
+Lihat file [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md) dan [BACKEND_FIX_SUMMARY.md](BACKEND_FIX_SUMMARY.md) untuk troubleshooting lengkap.
+
+---
+
+## 👨‍💻 Contact
+
+**Project Maintainer**: Noel
+
+- Email: noelgrevansha@gmail.com
+- GitHub: [nowelliswell](https://github.com/nowelliswell)
+- LinkedIn: [Noelino Grevansha](https://www.linkedin.com/in/noelino-grevansha-b4ba19215/)
+
+**Project Link**: [https://github.com/nowelliswell/absensi_facerecog](https://github.com/nowelliswell/absensi_facerecog)
+
+---
+
+<div align="center">
+
+**⭐ If this project helps you, give it a star! ⭐**
+
+Made with ❤️ by Noel
 
 </div>
 
